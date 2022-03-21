@@ -9,7 +9,7 @@ import (
 func Show(ctx *fiber.Ctx) error {
 	post := &models.Post{}
 
-	err := database.Conn.First(&post, "id = ?", ctx.Params("id")).Error
+	err := database.SqlServerDb.First(&post, "id = ?", ctx.Params("id")).Error
 	if err != nil {
 		return err
 	}

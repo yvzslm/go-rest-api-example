@@ -12,7 +12,7 @@ import (
 
 func main() {
 	// Application initialization
-	database.Init()
+	database.InitSqlServer()
 	migrations.Migrate()
 
 	port, _ := strconv.Atoi(os.Getenv("APP_PORT"))

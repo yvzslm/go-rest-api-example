@@ -4,17 +4,16 @@ import (
 	"fmt"
 	"os"
 
-	"gorm.io/driver/mysql"
+	"gorm.io/driver/sqlserver"
 	"gorm.io/gorm"
 )
 
-var MySqlDb *gorm.DB
+var SqlServerDb *gorm.DB
 
-func InitMySql() error {
+func InitSqlServer() error {
 	var err error
 
-	dsn := fmt.Sprintf(
-		"%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
+	dsn := fmt.Sprintf("sqlserver://%s:%s@%s:%s?database=%s",
 		os.Getenv("DB_USER"),
 		os.Getenv("DB_PASS"),
 		os.Getenv("DB_HOST"),
@@ -22,7 +21,7 @@ func InitMySql() error {
 		os.Getenv("DB_NAME"),
 	)
 
-	MySqlDb, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	SqlServerDb, err = gorm.Open(sqlserver.Open(dsn), &gorm.Config{})
 
 	if err != nil {
 		return err
