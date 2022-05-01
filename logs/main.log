@@ -1,3 +1,14 @@
 26723 200 - GET /posts
 26723 200 - GET /posts
 26723 200 - GET /post/ada05b38-cd40-451d-a06a-73e986855cbe
+7452 200 - GET /posts
+7452 200 - DELETE /post/e90617e1-c901-4315-805b-5ee9fca4ee21
+7452 200 - GET /posts
+7452 200 - POST /post/f88e6b06-3abb-4156-9e38-eb27ecdab7ae
+7452 200 - GET /post/f88e6b06-3abb-4156-9e38-eb27ecdab7ae
+7452 405 - POST /posts
+7452 200 - POST /post
+7452 200 - GET /posts
+7452 404 - GET /posts/a6065480-93cf-49d1-8032-ea665f48ae8c
+7452 200 - GET /post/a6065480-93cf-49d1-8032-ea665f48ae8c
+7452 200 - POST /post/a6065480-93cf-49d1-8032-ea665f48ae8c
